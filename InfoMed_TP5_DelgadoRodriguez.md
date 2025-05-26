@@ -88,7 +88,7 @@ SELECT nombre, CONCAT(numero, ' ', calle) AS direccion
 FROM Pacientes
 WHERE TRIM(LOWER(ciudad)) = 'buenos aires';
 ```
-![image](https://github.com/user-attachments/assets/9aa29234-6e6b-4c8c-b1bc-cc5d1ff5c0ad)
+![image](https://github.com/user-attachments/assets/ca89a5b8-b23a-41d3-a8cd-cd89adaaf487)
 
 ### 7. Cantidad de pacientes que viven en cada ciudad.
  
