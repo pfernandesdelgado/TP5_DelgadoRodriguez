@@ -3,7 +3,7 @@
 
 ## _Autores:_ 
 * Pedro Fernandes Delgado
-* Sebastian campos Rodriguez
+* Sebastian Campos Rodriguez
 
 ## **PARTE 1:** Bases de Datos
 
