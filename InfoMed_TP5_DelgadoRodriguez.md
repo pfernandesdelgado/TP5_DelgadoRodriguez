@@ -41,7 +41,8 @@ SELECT
 FROM Pacientes
 GROUP BY ciudad_normalizada;
 ```
-(imagen del resultado de la query)
+![image](https://github.com/user-attachments/assets/3641d999-2cd9-400c-b38f-f0a05d90e1bb)
+
 
 ### 2. Se tiene la fecha de nacimiento de los pacientes. Se desea calcular la edad de los pacientes y almacenarla de forma dinámica en el sistema ya que es un valor típicamente consultado, junto con otra información relevante del paciente.
 
