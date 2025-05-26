@@ -135,7 +135,8 @@ JOIN Pacientes p ON c.id_paciente = p.id_paciente WHERE c.id_medico = 3 AND c.fe
 SELECT  p.nombre AS nombre_paciente, c.fecha, c.diagnostico
 FROM Consultas c JOIN Pacientes p ON c.id_paciente = p.id_paciente WHERE  c.fecha BETWEEN '2024-08-01' AND '2024-08-31';
 ```
-![image](https://github.com/user-attachments/assets/e22ef519-5251-45b6-b13e-53c69d20c249)
+![image](https://github.com/user-attachments/assets/9fbfb737-b88b-41ae-9f53-c68e28412002)
+
 
 ### 12. Obtener el nombre de los medicamentos prescritos más de una vez por el médico con ID igual a 2.
 
