@@ -28,7 +28,18 @@ La normalización es un método utilizado para organizar una base de datos sigui
 ### 1. Cuando se realizan consultas sobre la tabla paciente agrupando por ciudad los tiempos de respuesta son demasiado largos. Proponer mediante una query SQL una solución a este problema.
 
 ```
-query 1
+CREATE INDEX idx_pacientes_ciudad ON Pacientes(ciudad);
+
+SELECT 
+    CASE 
+        WHEN LOWER(TRIM(ciudad)) IN ('buenos aires', 'bs aires', 'buenos aiers', 'buenos   aires') THEN 'Buenos Aires'
+        WHEN LOWER(TRIM(ciudad)) IN ('cordoba', 'córdoba', 'córodba') THEN 'Córdoba'
+        WHEN LOWER(TRIM(ciudad)) IN ('Mendoza', 'Mendzoa') THEN 'Mendoza'
+        ELSE ciudad
+    END AS ciudad_normalizada,
+    COUNT(*) AS total_pacientes
+FROM Pacientes
+GROUP BY ciudad_normalizada;
 ```
 (imagen del resultado de la query)
 
