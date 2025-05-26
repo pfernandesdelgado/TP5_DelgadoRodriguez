@@ -17,7 +17,7 @@ organizadas en tablas que pueden estar relacionadas entre sí mediante primary k
 <img src="imágenes/diagrama entidad-relación.jpeg" alt="diagrama entidad-relación" style="width:750px;"/>
 
 ### 3. Armar el modelo lógico entidad-relación de la base de datos dada.
-![modelo_relacional](imágenes/modelo_relacional.jpeg)
+![image](https://github.com/user-attachments/assets/4f3ff69c-d2f8-4eec-9916-2ea4e295b560)
 
 ### 4. Considera que la base de datos está normalizada. En caso que no lo esté, ¿cómo podría hacerlo?
 
