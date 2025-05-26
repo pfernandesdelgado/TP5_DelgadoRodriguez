@@ -169,7 +169,7 @@ LIMIT 1;
 ```
 ![image](https://github.com/user-attachments/assets/a3ab6d20-5dc9-4a15-a1bd-cc34185aeefb)
 
-### 15. Obtener el nombre del médico junto con el nombre del paciente y el número total de consultas realizadas por cada médico para cada paciente, ordenado por médico y paciente.
+### 15. Obtener el nombre del paciente junto con la fecha de su última consulta y el diagnóstico asociado.
 
 ```
 SELECT p.nombre AS NombrePaciente, 
