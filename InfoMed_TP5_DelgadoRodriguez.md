@@ -97,7 +97,7 @@ SELECT ciudad, COUNT(*) AS cantidad_pacientes
 FROM Pacientes
 GROUP BY ciudad;
 ```
-![image](https://github.com/user-attachments/assets/b8ea7f65-e04f-47df-b36c-028e6fbc5ef4)
+![image](https://github.com/user-attachments/assets/ccaf0c62-f33d-4091-8878-36ece39fb23b)
 
 ### 8. Cantidad de pacientes por sexo que viven en cada ciudad.
 
@@ -107,7 +107,7 @@ FROM Pacientes p
 JOIN SexoBiologico s ON p.id_sexo = s.id_sexo
 GROUP BY p.ciudad, s.descripcion;
 ```
-![image](https://github.com/user-attachments/assets/0312125d-b980-46b0-bbb8-b5fc82a7101a)
+![image](https://github.com/user-attachments/assets/a12aa2e8-a58d-4464-b258-7a84ad766764)
 
 ### 9. Obtener la cantidad de recetas emitidas por cada médico.
 
@@ -127,7 +127,7 @@ SELECT  c.id_consulta,  p.nombre AS nombre_paciente, c.fecha, c.diagnostico, c.t
 FROM  Consultas c
 JOIN Pacientes p ON c.id_paciente = p.id_paciente WHERE c.id_medico = 3 AND c.fecha BETWEEN '2024-08-01' AND '2024-08-31';
 ```
-![image](https://github.com/user-attachments/assets/0d3b2037-7fcb-4146-867d-5bbd4e9f6be9)
+![image](https://github.com/user-attachments/assets/c9ad3167-0c90-4be6-8dd7-e775afbb8ff0)
 
 ### 11. Obtener el nombre de los pacientes junto con la fecha y el diagnóstico de todas las consultas médicas realizadas en agosto del 2024.
 
@@ -148,7 +148,8 @@ GROUP BY m.nombre
 HAVING 
     COUNT(r.id_receta) > 1;
 ```
-![image](https://github.com/user-attachments/assets/0baa9865-3ef2-4fde-a7e7-3fc1cd54259f)
+![image](https://github.com/user-attachments/assets/48d4f539-0b68-4909-9fdc-ee637cccb09a)
+
 
 ### 13. Obtener el nombre de los pacientes junto con la cantidad total de recetas que han recibido.
 
@@ -158,7 +159,8 @@ FROM Pacientes p
 LEFT JOIN Recetas r ON p.id_paciente = r.id_paciente
 GROUP BY p.id_paciente;
 ```
-![image](https://github.com/user-attachments/assets/bd57c49c-5c61-48f3-b8bc-afaf551db8c1)
+![image](https://github.com/user-attachments/assets/70aa9b1f-a1cd-4cce-ab90-e222f00f71fc)
+
 
 ### 14. Obtener el nombre del medicamento más recetado junto con la cantidad de recetas emitidas para ese medicamento.
 
@@ -169,7 +171,7 @@ GROUP BY m.id_medicamento
 ORDER BY cantidad_recetas DESC
 LIMIT 1;
 ```
-![image](https://github.com/user-attachments/assets/a3ab6d20-5dc9-4a15-a1bd-cc34185aeefb)
+![image](https://github.com/user-attachments/assets/a5f679de-4c78-4ae8-be14-4152261f517f)
 
 ### 15. Obtener el nombre del paciente junto con la fecha de su última consulta y el diagnóstico asociado. 
 
@@ -183,7 +185,7 @@ WHERE c.fecha = (SELECT MAX(fecha)
                  FROM Consultas 
                  WHERE id_paciente = p.id_paciente);
 ```
-![image](https://github.com/user-attachments/assets/174250e7-520e-4483-9a26-1323f8575519)
+![image](https://github.com/user-attachments/assets/9de1c94f-913c-4672-9721-098fd02a2c55)
 
 ### 16. Obtener el nombre del médico junto con el nombre del paciente y el número total de consultas realizadas por cada médico para cada paciente, ordenado por médico y paciente.
 
@@ -203,7 +205,7 @@ GROUP BY
 ORDER BY 
     m.nombre, p.nombre;
 ```
-![image](https://github.com/user-attachments/assets/b96671e6-d34f-4855-bd63-49388cebd17f)
+![image](https://github.com/user-attachments/assets/7abfa829-60a7-495a-9438-b49e29accc9b)
 
 ### 17. Obtener el nombre del medicamento junto con el total de recetas prescritas para ese medicamento, el nombre del médico que lo recetó y el nombre del paciente al que se le recetó, ordenado por total de recetas en orden descendente.
 
@@ -216,7 +218,8 @@ JOIN Pacientes p ON r.id_paciente = p.id_paciente
 GROUP BY me.id_medicamento, m.id_medico, p.id_paciente
 ORDER BY TotalRecetas DESC;
 ```
-![image](https://github.com/user-attachments/assets/58e6d291-7ef8-49da-bc21-d43cd18711d3)
+![image](https://github.com/user-attachments/assets/b2b8289f-c2cc-4c20-a936-9977c889bbb1)
+![image](https://github.com/user-attachments/assets/91d79d44-22f7-40f2-a1dc-77f0f0375c7d)
 
 ### 18. Obtener el nombre del médico junto con el total de pacientes a los que ha atendido, ordenado por el total de pacientes en orden descendente.
 
@@ -233,5 +236,6 @@ GROUP BY
 ORDER BY 
     TotalPacientes DESC;
 ```
-![image](https://github.com/user-attachments/assets/497a5537-6859-40fe-8c05-ce1b5c534e13)
+![image](https://github.com/user-attachments/assets/e4487161-5a69-4b65-bdbc-9ab7867118f8)
+
 
