@@ -14,10 +14,10 @@ relacionales se utilizan para almacenar y gestionar datos estructurados y están
 organizadas en tablas que pueden estar relacionadas entre sí mediante primary keys y foreign keys.
 
 ### 2.  Armar el diagrama entidad-relación de la base de datos dada.
-<img src="imágenes/helisulbaranBD02.png" alt="ejemplo_modelo-ER" style="width:500px;"/>
+<img src="imágenes/diagrama entidad-relación.jpeg" alt="diagrama entidad-relación" style="width:500px;"/>
 
 ### 3. Armar el modelo lógico entidad-relación de la base de datos dada.
-![modelo_relacional](imágenes/modelo_relacional.jpeg)
+![modelo lógico entidad-relaciónl](imágenes/modelo lógico entidad-relación.jpeg)
 
 ### 4. Considera que la base de datos está normalizada. En caso que no lo esté, ¿cómo podría hacerlo?
 
